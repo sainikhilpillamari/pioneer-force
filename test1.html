@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BENTOGRID</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+<style>
+    .block1{
+        background-color: bisque;
+        width: 260px;
+        height:470px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight:lighter;
+        font-size: x-large;
+        border-radius: 10px;
+        position: relative;
+        top:30px;
+        left:100px;
+        
+    }
+    .blackblock1{
+        margin-left: 20px;
+        margin-top: 20px;
+        padding-top: 60px;
+        font-size: xx-large;
+        padding-left: 10px;
+    }
+    .purpleblock1{
+        color: #7f05ddf6;
+        margin-top: -29px;
+        font-size:xx-large;
+        padding-left: 25px;
+    }
+    .createpostbutton{
+        margin-left: 30px;
+        background-color: #e39f4c;
+        border: none;
+        color:#7f05ddf6 ;
+        font-weight:bold;
+        padding: 12px;
+        border-radius: 20px;
+    }
+    .block2{
+        background-color:#7f05ddf6 ;
+        border-radius: 10px;
+        justify-items:center;
+        width: 610px;
+        height: 320px;
+       position: absolute;
+       top: 52px;
+       left: 399px;
+       font-size: x-large;
+       font-weight: lighter;
+
+    }
+    .whitematterblock2-1{
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bolder;
+        font-size: 60px;
+        margin: 0px;
+        padding-top: 10px;
+                        }
+    .whitematterblock2-2{
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bolder;
+        font-size: 60px;
+        margin-top: 10px;
+    }
+    .yellowmatterblock2{
+        color: hsl(33, 73%, 67%);
+        font-weight: bolder;
+        font-size: 60px;
+        font-style:normal;
+       
+        
+
+    }
+    .starsblock2{
+        font-size: x-large;
+        margin-top: 20px;
+    }
+    .ratingmatter{
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        opacity: 80%;
+        
+    }
+    .block3{
+        background-color: hsl(268, 96%, 82%);
+        width: 330px;
+        height: 643px;
+        border-radius: 10px;
+        position: absolute;
+        left: 1045px;
+        top: 52px;
+        
+    }
+    .block3heading{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight:light;
+        font-size: 35px;
+        
+        padding-left: 45px;
+        padding-bottom: 0px;
+        
+    }
+    .block3image{
+        height:390px ;
+       
+        overflow: hidden;
+        border-top-left-radius:10px;
+        border-bottom-left-radius: 10px;
+        margin-left: 70px;
+    }
+    .block3matter{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: light;
+        font-size: larger;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .block4{
+        background-color: hwb(33 57% 2%);
+        width: 260px;
+        height: 470px;
+        border-radius: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        position: absolute;
+        top:549px;
+        left:108px;
+     
+       
+        
+        }
+        .heading4{
+            font-weight: light;
+        font-size:40px;
+        margin-top: 0px;
+        line-height: 1;
+        padding-top: 20px;
+        padding-left: 15px;
+        
+        }
+    .childblock4{
+        background-color: white;
+        border-radius: 10px;
+        width:220px;
+        height:280px;
+        top:430px;
+        left:100px;
+        margin-left: 20px;
+        margin-bottom: 10px;
+        
+        
+    }
+    .grandchildblock4-1{
+        background-color: hsla(26, 82%, 85%, 0.834);
+        position: relative;
+        height: 90px;
+        width: 125px;
+        padding-left: 30px;
+        top:20px;
+        left: 20px;
+        padding-top: 1px;
+        padding-right: 5px;
+       padding-left: 20px;
+        border-radius: 25px;
+        
+    }
+    .grandchildblock4-2{
+        background-color: antiquewhite;
+        border-radius: 25px;
+        position: relative;
+        top:50px ;
+        width: 140px;
+        height: 120px;
+        align-content: center;
+        padding-left: 15px;
+        margin-top: -10px;
+        left:45px;
+    }
+    .block5{
+        background-color: rgb(250, 240, 240);
+        width: 290px;
+        height: 290px;
+        border-radius: 10px;
+        position: absolute;
+        top: 405px;
+        left: 400px;
+        
+    }
+    
+    .childblock5-1{
+        background-color: white;
+        width: 135px;
+        align-content: center;
+        margin-top:-5px;
+        position: relative;
+        top: 30px;
+       padding-left: 30px;
+       margin-left: 20px;
+       padding-top: 10px;
+       padding-right: 20px;
+       border-radius: 60px;
+       
+        
+    }
+    .instaicon{
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        float: left;
+        margin-left: -20px;
+        margin-top: 3px;
+    }
+    .heading5-1insta{
+        margin-left: 45px;
+        margin-top: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: large;
+    }
+    .heading5-1follwerstag{
+        opacity: 50%;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 40px;
+        margin-top: -18px;
+        
+    }
+    .childblock5-2{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: x-large;
+        margin-left: 22px;
+        padding-top: 15px;
+    }
+    
+    .block6{
+            height: 290px;
+            width:290px;
+            background-color: white;
+            border-radius: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            position: absolute;
+            top:728px;
+            left:400px;
+            }
+
+        .block6heading{
+            font-weight:bolder;
+            font-size: 60px;
+            padding-left: 35px;
+            margin-top: 25px;
+        
+        }
+        .block6tag{
+            font-family:Arial, Helvetica, sans-serif;
+            margin-top: -52px;
+            margin-left:35px ;
+        }
+        .block6image{
+        position: relative;
+        height: 70px;
+        width: 180px;
+        top:20px;
+        left: 40px;
+
+        }
+    .block7{
+        background-color: rgba(253, 167, 63, 0.568);
+        width: 290px;
+        height: 290px;
+        border-radius: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        position: absolute;
+        top: 405px;
+        left: 720px;
+            }
+        .block7heading{
+            padding-left: 25px;
+            padding-top: 0px;
+            font-size: 30px;
+        }
+        .childblock7-1{
+            background-color: #7f05ddf6;
+            margin-left: 20px;
+            margin-right: 20px;
+            height:20px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            padding: 15px;
+        }
+        .heading7date{
+            color: white;
+           margin-right: 25px;
+                     }
+        .heading7week{
+            color: white;
+                }
+        .childblock7-2{
+            background-color: white;
+            margin-left: 20px;
+            margin-right: 20px;
+            height: 30px;
+            padding-left: 23px;
+            padding-top: 10px;
+            padding-bottom: 016px;
+             }
+    .block8{
+        width:650px;
+        height:290px;
+        background-color:#7f05ddf6 ;
+        border-radius: 10px;
+        position: absolute;
+        top: 730px;
+        left: 720px;
+
+    }
+    .block8image{
+        width: 240px;
+        float: left;
+       padding-top: 39px;
+        margin-left: 27px;
+        padding-right: 25px;
+        padding-left: 5px;
+    }
+    .block8content{
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        padding-top: 40px;
+        font-size: 45px;
+       
+        
+    }
+
+</style>
+</head>
+
+<body style="background-color: #e9e8e8;" >
+    <div class="block1">
+        
+        <h3 class="blackblock1">Create and<br>schedule<br>content</h3>
+        <p class="purpleblock1"><em>quicker.</em></p>
+        <a href="www.createpost.com" target="_blank">
+            <button class="createpostbutton">Create Post  &#x2728;</button>
+        </a>
+        
+    </div>
+    <div class="block2">
+        <span class="whitematterblock2-1">Social Media</span>
+        <span class="yellowmatterblock2">10x</span>
+        <p class="whitematterblock2-2"><em>Faster</em> with AI</p>
+        <p class="starsblock2">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</p>
+        <p class="ratingmatter">Over 4,000 5-star reviews</p>
+    </div>
+    <div class="block3">
+        <h3 class="block3heading">Schedule to<br>
+            social media.</h3>
+        <img class="block3image"  src="block3img.jpg">
+        <p class="block3matter">Optimize post timings to publish content at the perfect time for your audience.</p>
+    </div>
+    <div class="block4">
+        <h3 class="heading4">Write your<br>
+            content<br>
+            using AI.</h3>
+        <div class="childblock4">
+            <div class="grandchildblock4-1">
+                <p>Give me a 5 tips<br>     to growth my<br>follower on Insta!</p>
+                
+            </div>
+            <div class="grandchildblock4-2">
+                <p>Certainly! Here<br>
+                    are five tips to<br>help you grow<br> your Instagram...</p>
+            </div>
+        </div>
+    </div>
+    <div class="block5">
+        <div class="childblock5-1">
+            <img class="instaicon" src="instaicon.jpg">
+            <h4 class="heading5-1insta">@YourCo</h4>
+            <p class="heading5-1follwerstag">12kFollowers</p>
+        </div>
+        <div class="childblock5-2">
+            <h3>Manage<br> multiple<br> accounts and<br> platforms.</h3>
+        </div>
+    </div>
+    <div class="block6">
+        <p class="block6heading">>56%</p>
+        <p class="block6tag">faster audience growth</p>
+        <img class="block6image" src="illustration-audience-growth.webp">
+    </div>
+    <div class="block7">
+        <h2 class="block7heading">Maintain a<br> consistent<br> posting<br> schedule.</h2>
+        <div class="childblock7-1">
+            <span class="heading7date">August 2024</span>
+            <span class="heading7week"> Week1</span>
+        </div>
+        <div class="childblock7-2" >
+            <i class="fa fa-check" style="color: white; background-color: #7f05ddf6; border-radius: 50%; padding: 8px; font-size:x-small;margin-right: 20px;margin-left:10px;margin-top:3px;"></i>
+            <i class="fa fa-check" style="color: white; background-color: #7f05ddf6; border-radius: 50%; padding: 8px;font-size:x-small;margin-right: 20px;"></i>
+            <i class="fa fa-check" style="color: white; background-color: #7f05ddf6; border-radius: 50%; padding: 8px;font-size:x-small;margin-right: 20px;"></i>
+            <i class="fa fa-check" style="color: white; background-color: #7f05ddf6; border-radius: 50%; padding: 8px;font-size:x-small;"></i>
+        </div>
+    </div>
+    <div class="block8" >
+        <img class="block8image" src="illustration-grow-followers.webp">
+        <h2 class="block8content">Grow followers <br>with non-stop <br>content.</h2>
+    </div>
+</body>
+</html>
